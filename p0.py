@@ -85,7 +85,7 @@ def get_logged_in_user_email() -> Optional[str]:
 
 url_param = st.query_params.to_dict()
 user_email = get_logged_in_user_email()
-st.write("user_email:", user_email)
+st.write("Hi", user_email)
 
 if len(url_param):
-  st.markdown("<a href='http://43.135.26.66:8501/?uid=" + user_email + "' target='_self'>GO</a>", unsafe_allow_html=True)
+  st.markdown("Login successful, please click <a href='http://43.135.26.66:8501/?uid=" + user_email + "' target='_self'>here</a>", unsafe_allow_html=True)
