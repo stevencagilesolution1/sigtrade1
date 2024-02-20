@@ -2,3 +2,5 @@ pandas
 streamlit
 pillow
 mysql-connector
+pyjwt
+httpx-oauth
