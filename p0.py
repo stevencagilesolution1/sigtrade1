@@ -3,6 +3,8 @@ import streamlit as st
 from httpx_oauth.clients.google import GoogleOAuth2
 from httpx_oauth.oauth2 import OAuth2Token
 import urllib.parse
+import asyncio
+from typing import Optional
 
 client_id = st.secrets["client_id"]
 client_secret = st.secrets["client_secret"]
