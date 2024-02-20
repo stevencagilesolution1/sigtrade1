@@ -83,14 +83,10 @@ def get_logged_in_user_email() -> Optional[str]:
 
 
 url_param = st.query_params.to_dict()
-code = url_param.get("code", "")
-scope = url_param.get("scope", "")
-authuser = url_param.get("authuser", "")
-prompt = url_param.get("prompt", "")
-st.write(url_param)
-
 user_email = get_logged_in_user_email()
 st.write("user_email:", user_email)
+
+st.link_button("Go to homepage", "http://43.135.26.66:8501/?uid=" + user_email)
 
 if len(url_param):
   st.markdown("<a href='http://43.135.26.66:8501/?uid=" + user_email + "' target='_blank'>GO</a>", unsafe_allow_html=True)
