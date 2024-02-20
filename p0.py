@@ -87,5 +87,8 @@ authuser = url_param.get("authuser", "")
 prompt = url_param.get("prompt", "")
 st.write(url_param)
 
+user_email = get_logged_in_user_email()
+st.write("user_email:", user_email)
+
 if len(url_param):
   st.markdown("<a href='http://43.135.26.66:8501/?code=" + code + "&scope=" + scope + "&authuser=" + authuser + "&prompt=" + prompt + "' target='_blank'>GO</a>", unsafe_allow_html=True)
