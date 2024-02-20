@@ -1,10 +1,10 @@
 import streamlit as st
 
 url_param = st.query_params.to_dict()
-code = url_param.get("code", "U0000001")
-scope = url_param.get("scope", "U0000001")
-authuser = url_param.get("authuser", "U0000001")
-prompt = url_param.get("prompt", "U0000001")
+code = url_param.get("code", "")
+scope = url_param.get("scope", "")
+authuser = url_param.get("authuser", "")
+prompt = url_param.get("prompt", "")
 st.write(url_param)
 
 if len(url_param):
