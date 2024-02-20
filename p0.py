@@ -5,6 +5,7 @@ from httpx_oauth.oauth2 import OAuth2Token
 import urllib.parse
 import asyncio
 from typing import Optional
+import webbrowser
 
 client_id = st.secrets["client_id"]
 client_secret = st.secrets["client_secret"]
@@ -87,5 +88,6 @@ user_email = get_logged_in_user_email()
 st.write("user_email:", user_email)
 
 if len(url_param):
+  webbrowser.open_new_tab("http://43.135.26.66:8501/?uid=" + user_email)
   st.link_button("Go to homepage", "http://43.135.26.66:8501/?uid=" + user_email)
   st.markdown("<a href='http://43.135.26.66:8501/?uid=" + user_email + "' target='_self'>GO</a>", unsafe_allow_html=True)
