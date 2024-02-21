@@ -86,4 +86,6 @@ url_param = st.query_params.to_dict()
 user_email = get_logged_in_user_email()
 
 if len(url_param):
-  st.markdown("Login successful, please click <a href='http://43.135.26.66:8501/?uid=" + user_email + "'>here</a>", unsafe_allow_html=True)
+  st.markdown("<font size='6'>Trade with confidence, knowing that AI is on your side.</font>", unsafe_allow_html=True)
+  st.link_button("Starts now", "http://43.135.26.66:8501/?uid=" + user_email)
+  # st.markdown("Login successful, please click <a href='http://43.135.26.66:8501/?uid=" + user_email + "'>Starts now</a>", unsafe_allow_html=True)
