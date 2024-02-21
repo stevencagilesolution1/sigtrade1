@@ -82,10 +82,23 @@ def get_logged_in_user_email() -> Optional[str]:
     st.session_state["email"] = user_info["email"]
     return user_info["email"]
 
+style = """
+<style>
+  [data-testid='stAppViewContainer'] > .main {background-image: url('https://images.unsplash.com/photo-1542281286-9e0a16bb7366'); background-size: 100vw 100vh;  background-position: center;  background-repeat: no-repeat;}
+  [data-testid="collapsedControl"] {display: none;}
+  .stDeployButton {display:none;}
+  header {visibility: hidden;}
+  @import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400&display=swap");
+  @font-face {font-family: "Lato", sans-serif; color: white;}
+  html, body, [class*="css"]  {font-family: "Lato"; font-size: 16px;}
+  #MainMenu {visibility: hidden;}
+  footer {visibility: hidden;}
+</style>
+"""
+st.markdown(style, unsafe_allow_html=True)
 url_param = st.query_params.to_dict()
 user_email = get_logged_in_user_email()
 
 if len(url_param):
-  st.markdown("<font size='6'>Trade with confidence, knowing that AI is on your side.</font>", unsafe_allow_html=True)
+  st.markdown("<font size='6' color='white'>Trade with confidence,<br>knowing that<br>AI is on your side.</font><br><br><br><br>", unsafe_allow_html=True)
   st.link_button("Starts now", "http://43.135.26.66:8501/?uid=" + user_email)
-  # st.markdown("Login successful, please click <a href='http://43.135.26.66:8501/?uid=" + user_email + "'>Starts now</a>", unsafe_allow_html=True)
