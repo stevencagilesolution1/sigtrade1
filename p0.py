@@ -84,7 +84,7 @@ def get_logged_in_user_email() -> Optional[str]:
 
 style = """
 <style>
-  [data-testid='stAppViewContainer'] > .main {background-image: url('https://images.unsplash.com/photo-1542281286-9e0a16bb7366'); background-size: 100vw 100vh;  background-position: center;  background-repeat: no-repeat;}
+  [data-testid='stAppViewContainer'] > .main {background-image: url('https://live.staticflickr.com/65535/53543115180_65459de2b7_b.jpg'); background-size: 100vw 100vh;  background-position: center;  background-repeat: no-repeat;}
   [data-testid="collapsedControl"] {display: none;}
   .stDeployButton {display:none;}
   header {visibility: hidden;}
