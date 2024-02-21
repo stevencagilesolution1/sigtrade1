@@ -84,6 +84,7 @@ def get_logged_in_user_email() -> Optional[str]:
 
 
 url_param = st.query_params.to_dict()
+st.write(url_param)
 user_email = get_logged_in_user_email()
 st.write("Hi", user_email)
 
