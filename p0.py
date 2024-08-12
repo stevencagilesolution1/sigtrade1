@@ -95,7 +95,7 @@ def get_logged_in_user_email() -> Optional[str]:
 #   footer {visibility: hidden;}
 # </style>
 # """
-style = "<style>html, body, [class*="css"]  {background-color: white;}</style>"
+style = "<style>html, body, [class*='css']  {background-color: white;}</style>"
 st.markdown(style, unsafe_allow_html=True)
 url_param = st.query_params.to_dict()
 user_email = get_logged_in_user_email()
