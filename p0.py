@@ -82,23 +82,23 @@ def get_logged_in_user_email() -> Optional[str]:
     st.session_state["email"] = user_info["email"]
     return user_info["email"]
 
-style = """
-<style>
-  [data-testid='stAppViewContainer'] > .main {background-image: url('https://live.staticflickr.com/65535/53543115180_65459de2b7_b.jpg'); background-size: 100vw 100vh;  background-position: center;  background-repeat: no-repeat;}
-  [data-testid="collapsedControl"] {display: none;}
-  .stDeployButton {display:none;}
-  header {visibility: hidden;}
-  @import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400&display=swap");
-  @font-face {font-family: "Lato", sans-serif; color: white;}
-  html, body, [class*="css"]  {font-family: "Lato"; font-size: 16px;}
-  #MainMenu {visibility: hidden;}
-  footer {visibility: hidden;}
-</style>
-"""
-st.markdown(style, unsafe_allow_html=True)
+# style = """
+# <style>
+#   [data-testid='stAppViewContainer'] > .main {background-image: url('https://live.staticflickr.com/65535/53543115180_65459de2b7_b.jpg'); background-size: 100vw 100vh;  background-position: center;  background-repeat: no-repeat;}
+#   [data-testid="collapsedControl"] {display: none;}
+#   .stDeployButton {display:none;}
+#   header {visibility: hidden;}
+#   @import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400&display=swap");
+#   @font-face {font-family: "Lato", sans-serif; color: white;}
+#   html, body, [class*="css"]  {font-family: "Lato"; font-size: 16px;}
+#   #MainMenu {visibility: hidden;}
+#   footer {visibility: hidden;}
+# </style>
+# """
+# st.markdown(style, unsafe_allow_html=True)
 url_param = st.query_params.to_dict()
 user_email = get_logged_in_user_email()
 
 if len(url_param):
-  st.markdown("<font size='6' color='white'>Trade with confidence,<br>knowing that<br>AI is on your side.</font><br><br><br><br>", unsafe_allow_html=True)
-  st.link_button("Starts now", "http://43.135.26.66:8501/?uid=" + user_email)
+  st.markdown("<font size='4'><b>Want to keep your strategies beyond 2024?</b><br>Subscribe to any SigTrade level! <br>We'll be clearing unsubscribed accounts of saved strategies after December 31st, 2024.</font><br><br><br><br>", unsafe_allow_html=True)
+  st.link_button("Enter app", "http://43.135.26.66:8501/?uid=" + user_email)
