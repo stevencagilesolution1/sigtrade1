@@ -95,10 +95,12 @@ def get_logged_in_user_email() -> Optional[str]:
 #   footer {visibility: hidden;}
 # </style>
 # """
-# st.markdown(style, unsafe_allow_html=True)
+style = "<style>html, body, [class*="css"]  {background-color: white;}</style>"
+st.markdown(style, unsafe_allow_html=True)
 url_param = st.query_params.to_dict()
 user_email = get_logged_in_user_email()
 
 if len(url_param):
-  st.markdown("<font size='4'><b>Want to keep your strategies beyond 2024?</b><br>Subscribe to any SigTrade level! <br>We'll be clearing unsubscribed accounts of saved strategies after December 31st, 2024.</font><br><br><br><br>", unsafe_allow_html=True)
+  st.warning("Want to keep your strategies beyond 2024?", icon="⚠️")
+  st.markdown("<font size='4'>Subscribe to any SigTrade level! <br>We'll be clearing unsubscribed accounts of saved strategies after December 31st, 2024.</font><br><br><br><br>", unsafe_allow_html=True)
   st.link_button("Enter app", "http://43.135.26.66:8501/?uid=" + user_email)
