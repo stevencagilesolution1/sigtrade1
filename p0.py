@@ -101,7 +101,7 @@ style = """
   .stDeployButton {display:none;}
   header {visibility: hidden;}
   html, body, [class*='css']  {background-color: white;}</style>
-  #MainMenu {visibility: hidden;}
+  MainMenu {visibility: hidden;}
   footer {visibility: hidden;}
 </style>
 """
