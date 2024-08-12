@@ -100,8 +100,7 @@ style = """
   [data-testid="collapsedControl"] {display: none;}
   .stDeployButton {display:none;}
   header {visibility: hidden;}
-  html, body, [class*='css']  {background-color: white;}</style>
-  MainMenu {visibility: hidden;}
+  html, body, [class*='css']  {background-color: white;}
   footer {visibility: hidden;}
 </style>
 """
